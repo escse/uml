@@ -1,6 +1,6 @@
 import os
 import re
-
+import sys
 
 def capture(pattern):
     return r"({})".format(pattern)
@@ -143,7 +143,12 @@ digraph G {{
 """
 
 def main():
-    files = findFileType(".", "java")
+    
+    if len(sys.argv) == 1:
+        dir = "."
+    else:
+        dir = sys.argv[1]
+    files = findFileType(dir, "java")
     umls = [UML(filename) for filename in files]
     uml_text = "\n".join(str(c) for c in umls)
     graph_text = template.format(uml_text)

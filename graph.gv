@@ -1,0 +1,23 @@
+
+digraph G {
+    fontname = "Courier New"
+    fontsize = 8
+
+    node [
+            fontname = "Courier New"
+            fontsize = 8
+            shape = "record"
+    ]
+
+    edge [
+            fontname = "Courier New"
+            fontsize = 8
+    ]
+    	Animal [		label = "{Animal|+ id : int\l+ name : String|+ eat () : void\l+ drink () : int\l+ sing (int) : int}"	]	
+	BigDog [		label = "{BigDog||+ runFaster () : void}"	]	BigDog -> Dog
+	Cat [		label = "{Cat||+ eat () : void\l+ drink () : int\l+ sing (int) : int\l+ run () : void}"	]	Cat -> Animal
+	Cat -> Run
+	Dog [		label = "{Dog||+ eat () : void\l+ drink () : int\l+ sing (int) : int\l+ bark () : void\l+ run () : void}"	]	Dog -> Animal
+	Dog -> Run
+	Run [		label = "{Run||+ run () : void}"	]	
+}
