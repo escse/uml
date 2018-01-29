@@ -24,3 +24,8 @@ java uml 生成
 
 1. 改进显示
 2. 标识接口
+
+
+## Example 
+
+![](./example.png)
